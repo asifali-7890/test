@@ -13,12 +13,12 @@ function App() {
     generateRandomNumber();
   }, [randomNumber])
 
-  console.log('ASIF ALI IS GREAT....');
+
 
   return (
     <div style={{ textAlign: 'center', marginTop: '20px' }}>
       <h1>Master Debugging</h1>
-      <button style={{ padding: '8px 16px', marginTop: '10px' }}>
+      <button  style={{ padding: '8px 16px', marginTop: '10px' }}>
         Generate Random Number
       </button>
     </div>
