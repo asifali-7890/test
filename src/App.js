@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
 
 function App() {
+  let randomNumber;
+
+
+  // Now, you can call the function when needed
+  useEffect(() => {
+    const generateRandomNumber = () => {
+      randomNumber = Math.floor(Math.random() * 100) + 1; // Generates a random number between 1 and 100
+      console.log("Random Number:", randomNumber);
+    };
+    generateRandomNumber();
+  }, [randomNumber])
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+      <h1>Master Debugging</h1>
+      <button  style={{ padding: '8px 16px', marginTop: '10px' }}>
+        Generate Random Number
+      </button>
     </div>
   );
 }
